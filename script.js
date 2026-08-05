@@ -847,4 +847,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  // ==========================================
+  // FEATURED ASSETS CAROUSEL SLIDING ENGINE
+  // ==========================================
+  function initAssetsCarousel() {
+    const wrapper = document.querySelector('.assets-carousel-wrapper');
+    const track = document.getElementById('assets-carousel-track');
+    const prevBtn = document.getElementById('carousel-prev-btn');
+    const nextBtn = document.getElementById('carousel-next-btn');
+
+    if (!wrapper || !track) return;
+
+    const getScrollStep = () => {
+      const slide = track.querySelector('.asset-slide');
+      if (!slide) return 320;
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.gap) || 24;
+      return slide.offsetWidth + gap;
+    };
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const step = getScrollStep();
+        wrapper.scrollBy({ left: step, behavior: 'smooth' });
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const step = getScrollStep();
+        wrapper.scrollBy({ left: -step, behavior: 'smooth' });
+      });
+    }
+  }
+
+  initAssetsCarousel();
+
 });
