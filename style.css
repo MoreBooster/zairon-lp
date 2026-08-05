@@ -5814,7 +5814,7 @@ section {
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  background: rgba(0, 0, 0, 0.30) !important; /* 30% black overlay */ /* 10% black overlay */
+  background: rgba(0, 0, 0, 0.35) !important; /* 30% black overlay */ /* 10% black overlay */
   pointer-events: none !important;
   z-index: 1 !important;
 }
@@ -5869,6 +5869,13 @@ section {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+
+
+
+  /* 35% Black Video Overlay on Mobile (< 1024px) */
+  .hero-video-overlay {
+    background: rgba(0, 0, 0, 0.35) !important;
   }
 
 }
