@@ -848,8 +848,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ==========================================
-  // FEATURED ASSETS CAROUSEL SLIDING ENGINE
+// ==========================================
+  // FEATURED ASSETS INFINITE LOOP CAROUSEL ENGINE
   // ==========================================
   function initAssetsCarousel() {
     const wrapper = document.querySelector('.assets-carousel-wrapper');
@@ -859,13 +859,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!wrapper || !track) return;
 
+    // Clone slides once to create seamless infinite loop buffer
+    if (!track.dataset.cloned) {
+      const slides = Array.from(track.children);
+      slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        track.appendChild(clone);
+      });
+      track.dataset.cloned = "true";
+    }
+
     const getScrollStep = () => {
       const slide = track.querySelector('.asset-slide');
-      if (!slide) return 320;
+      if (!slide) return 300;
       const style = window.getComputedStyle(track);
       const gap = parseFloat(style.gap) || 24;
       return slide.offsetWidth + gap;
     };
+
+    let isAdjusting = false;
+
+    const handleInfiniteScroll = () => {
+      if (isAdjusting) return;
+      const step = getScrollStep();
+      const halfCount = Math.floor(track.children.length / 2);
+      const loopWidth = halfCount * step;
+
+      if (wrapper.scrollLeft >= loopWidth) {
+        isAdjusting = true;
+        wrapper.style.scrollBehavior = 'auto';
+        wrapper.scrollLeft -= loopWidth;
+        wrapper.style.scrollBehavior = 'smooth';
+        setTimeout(() => { isAdjusting = false; }, 50);
+      } else if (wrapper.scrollLeft <= 5) {
+        isAdjusting = true;
+        wrapper.style.scrollBehavior = 'auto';
+        wrapper.scrollLeft += loopWidth;
+        wrapper.style.scrollBehavior = 'smooth';
+        setTimeout(() => { isAdjusting = false; }, 50);
+      }
+    };
+
+    wrapper.addEventListener('scroll', handleInfiniteScroll, { passive: true });
 
     if (nextBtn) {
       nextBtn.addEventListener('click', (e) => {
