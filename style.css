@@ -5879,3 +5879,24 @@ section {
   }
 
 }
+
+
+
+/* =========================================================
+   CAROUSEL EDGE FADE MASK (SMOOTH LEFT & RIGHT DISSOLVE)
+   ========================================================= */
+.horizontal-viewport,
+.assets-carousel-wrapper,
+.logo-marquee {
+  mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%) !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .horizontal-viewport,
+  .assets-carousel-wrapper,
+  .logo-marquee {
+    mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%) !important;
+  }
+}
