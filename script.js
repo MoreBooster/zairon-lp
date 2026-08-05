@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     "en-US": {
       meta: {
-        title: "CasaTrade — One Broker. Infinite Ways to Invest.",
+        title: "ZAIRON — One Broker. Infinite Ways to Invest.",
         description: "Trade global markets through a secure, intuitive platform built for smarter decisions."
       },
       nav: {
@@ -170,11 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
       faq: {
         title: "Frequently Asked Questions",
         q1: "What is the minimum deposit?",
-        a1: "The minimum deposit on CasaTrade starts at $10, and the minimum trade size is just $1.",
+        a1: "The minimum deposit on ZAIRON starts at $10, and the minimum trade size is just $1.",
         q2: "Can I test the platform without making a deposit?",
         a2: "Yes! Every user gets access to a free Demo Account with $10,000 in virtual funds to practice risk-free.",
         q3: "Do you charge commissions on deposits or withdrawals?",
-        a3: "CasaTrade charges 0% commission on deposits and withdrawals. All transactions are fee-free.",
+        a3: "ZAIRON charges 0% commission on deposits and withdrawals. All transactions are fee-free.",
         q4: "How long do withdrawals take?",
         a4: "Withdrawal requests are processed rapidly, usually within 1 hour to 24 hours depending on the chosen payment method.",
         q5: "Do you have a mobile app?",
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     "pt-BR": {
       meta: {
-        title: "CasaTrade — Uma corretora, infinitos caminhos para investir.",
+        title: "ZAIRON — Uma corretora, infinitos caminhos para investir.",
         description: "Negocie nos mercados globais por meio de uma plataforma segura e intuitiva feita para decisões mais inteligentes."
       },
       nav: {
@@ -400,11 +400,11 @@ document.addEventListener('DOMContentLoaded', () => {
       faq: {
         title: "Perguntas Frequentes",
         q1: "Qual é o depósito mínimo?",
-        a1: "O depósito mínimo na CasaTrade começa em $ 10, e o investimento mínimo por negociação é de apenas $ 1.",
+        a1: "O depósito mínimo na ZAIRON começa em $ 10, e o investimento mínimo por negociação é de apenas $ 1.",
         q2: "Posso testar a plataforma sem fazer um depósito?",
         a2: "Claro! Use uma conta de demonstração gratuita para se familiarizar com nossa plataforma. A conta de demonstração vem com 10.000 dólares virtuais para praticar sem riscos.",
         q3: "Vocês cobram comissões sobre depósitos ou retiradas?",
-        a3: "A CasaTrade não cobra nenhuma taxa por depósitos. Quando se trata de retiradas, você ganha uma retirada gratuita por mês. Quaisquer retiradas adicionais incorrerão em uma taxa institucional.",
+        a3: "A ZAIRON não cobra nenhuma taxa por depósitos. Quando se trata de retiradas, você ganha uma retirada gratuita por mês. Quaisquer retiradas adicionais incorrerão em uma taxa institucional.",
         q4: "Quanto tempo leva uma retirada?",
         a4: "Processamos retiradas em até 5 dias úteis. Após a aprovação, a velocidade da sua retirada depende do método de pagamento escolhido, variando de instantâneo a até 5 dias úteis.",
         q5: "Vocês têm um aplicativo para dispositivos móveis?",
@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.lang = locale === 'pt-BR' ? 'pt-BR' : 'en';
 
     try {
-      localStorage.setItem('casatrade-locale', locale);
+      localStorage.setItem('zairon-locale', locale);
     } catch (e) {}
 
     const dict = translations[locale];
@@ -511,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const canonicalLink = document.getElementById('canonical-link');
     const targetPath = locale === 'pt-BR' ? '/pt-br' : '/';
     if (canonicalLink) {
-      canonicalLink.setAttribute('href', 'https://casatrade.com' + targetPath);
+      canonicalLink.setAttribute('href', 'https://zaironbroker.com' + targetPath);
     }
 
     if (updateUrl && window.history && window.history.pushState) {
@@ -653,7 +653,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load initial saved language preference
   try {
-    const savedLocale = localStorage.getItem('casatrade-locale') || 'en-US';
+    const savedLocale = localStorage.getItem('zairon-locale') || 'en-US';
     setLanguage(savedLocale, false);
     const currentLabel = document.getElementById('lang-current-label');
     if (currentLabel) {
