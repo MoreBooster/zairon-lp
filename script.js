@@ -511,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const canonicalLink = document.getElementById('canonical-link');
     const targetPath = locale === 'pt-BR' ? '/pt-br' : '/';
     if (canonicalLink) {
-      canonicalLink.setAttribute('href', 'https://zaironbroker.com' + targetPath);
+      canonicalLink.setAttribute('href', 'https://zaironlp.xyz' + targetPath);
     }
 
     if (updateUrl && window.history && window.history.pushState) {
