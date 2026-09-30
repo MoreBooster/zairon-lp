@@ -10,6 +10,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parent
 LOGO_URL = 'terms-logo.png'
+FAVICON_URL = 'favicon.png?v=20260930'
 SIGNUP_URL = 'https://trade.zaironbroker.com/account/signup'
 LOGIN_URL = 'https://trade.zaironbroker.com/login'
 
@@ -230,8 +231,8 @@ def page_template(
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="ZAIRON legal documentation: terms and conditions, withdrawals, rollover, AML/KYC, fair trading and risk disclosures." />
   <title>{html.escape(INTRO_COPY["en"]["page_title"])}</title>
-  <link rel="icon" href="{LOGO_URL}" sizes="32x32" />
-  <link rel="apple-touch-icon" href="{LOGO_URL}" />
+  <link rel="icon" type="image/png" href="{FAVICON_URL}" />
+  <link rel="apple-touch-icon" href="{FAVICON_URL}" />
   <link rel="stylesheet" href="terms.css?v=20260930" />
 </head>
 <body id="top">

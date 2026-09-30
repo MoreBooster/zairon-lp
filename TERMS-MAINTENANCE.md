@@ -8,6 +8,7 @@ Página pública: `/terms-of-use.html`. O link **Terms & Conditions** no rodapé
 - `generate_terms.py`: gera o HTML estático. Executar `python generate_terms.py` após mudar o conteúdo.
 - `terms.css` e `terms.js`: apresentação e seleção de idioma. Os termos respeitam o idioma salvo pela página principal, o parâmetro `?lang=pt-br` e os links de seção.
 - `terms-logo.png`: logo fornecida para a adaptação.
+- `favicon.png`: imagem do símbolo Z fornecida em 30/09/2026, usada como favicon e ícone de atalho Apple na página principal e nos termos. A imagem original é preservada; a versão na URL evita reutilizar o favicon anterior em cache.
 - Fontes locais Manrope e Fira Code, distribuídas pelo Fontsource 5.3.0; licenças em `terms-font-licenses.txt`.
 
 ## Alteração de 30/09/2026
@@ -18,6 +19,6 @@ A adaptação não equivale a um parecer jurídico nem valida a eficácia das cl
 
 ## Publicação
 
-Este é um site estático. Publicar `terms-of-use.html`, `terms.css`, `terms.js`, `terms-logo.png`, `terms-manrope.woff2`, `terms-fira-code.woff2` e `terms-font-licenses.txt` na mesma pasta pública que o `index.html`.
+Este é um site estático. Publicar `terms-of-use.html`, `terms.css`, `terms.js`, `terms-logo.png`, `favicon.png`, `terms-manrope.woff2`, `terms-fira-code.woff2` e `terms-font-licenses.txt` na mesma pasta pública que o `index.html`.
 
 Na Hostinger, preservar as alterações próprias do HTML publicado e atualizar o destino de `data-i18n="footer.linkTerms"` para `/terms-of-use.html`. O repositório e a hospedagem são atualizados separadamente; não há sincronização automática configurada neste projeto.
