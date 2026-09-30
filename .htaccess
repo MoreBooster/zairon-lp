@@ -1,0 +1,25 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# Serve the language URL produced by the landing page.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^pt-br/$ /pt-br [R=302,L]
+    RewriteRule ^pt-br$ index.html [L]
+</IfModule>
+
+# Revalidate documents and navigation scripts after deployments.
+<FilesMatch "^(index\.html|terms-of-use\.html|script\.js|terms\.js)$">
+    <IfModule mod_expires.c>
+        ExpiresActive Off
+    </IfModule>
+    <IfModule mod_headers.c>
+        Header onsuccess unset Cache-Control
+        Header always set Cache-Control "no-cache, max-age=0, must-revalidate"
+        Header onsuccess unset Expires
+        Header always unset Expires
+    </IfModule>
+</FilesMatch>

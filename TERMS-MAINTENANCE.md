@@ -22,3 +22,9 @@ A adaptação não equivale a um parecer jurídico nem valida a eficácia das cl
 Este é um site estático. Publicar `terms-of-use.html`, `terms.css`, `terms.js`, `terms-logo.png`, `favicon.png`, `terms-manrope.woff2`, `terms-fira-code.woff2` e `terms-font-licenses.txt` na mesma pasta pública que o `index.html`.
 
 Na Hostinger, preservar as alterações próprias do HTML publicado e atualizar o destino de `data-i18n="footer.linkTerms"` para `/terms-of-use.html`. O repositório e a hospedagem são atualizados separadamente; não há sincronização automática configurada neste projeto.
+
+## Correção de navegação de 30/09/2026
+
+Uma aba antiga foi encontrada com `href="#"` no link de termos, reproduzindo o retorno ao topo. A página atual mantém o destino HTML direto, e `script.js` repara esse destino em HTML antigo, ao carregar, ao restaurar a página e antes do clique. O script ganhou uma nova versão de URL e as referências de termos nas traduções também apontam para a página publicada.
+
+Publicar também `.htaccess` e `script.js`. A configuração preserva os cabeçalhos CORS existentes, faz HTML e scripts de navegação revalidarem seu cache e resolve `/pt-br` e `/pt-br/` para a página principal, mantendo os demais caminhos sem alteração. O idioma da rota portuguesa é reconhecido na inicialização. Após a publicação, limpar o cache da hospedagem. Abas já abertas com HTML e JavaScript antigos precisam ser recarregadas uma vez.
