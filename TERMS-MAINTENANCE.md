@@ -12,7 +12,7 @@ Página pública: `/terms-of-use.html`. O link **Terms & Conditions** no rodapé
 
 ## Alteração de 30/09/2026
 
-Adaptação dos termos existentes para a ZAIRON, com substituição da marca e inclusão da cláusula 8.1 nos três idiomas. A cláusula prevê possível rollover em contas sem movimentação manual e com flutuação de saldo. Nenhuma base, multiplicador ou prazo foi definido: a redação exige comunicação prévia, aceitação específica, preservação dos direitos legais e ausência de retroatividade.
+Adaptação dos termos existentes para a ZAIRON, com substituição da marca e inclusão da cláusula 8.1 nos três idiomas. A cláusula prevê possível rollover em contas sem movimentação manual e com flutuação de saldo. Nenhuma base, multiplicador ou prazo foi definido. A redação revisada prevê determinação unilateral pela ZAIRON, independentemente de anuência ou aceitação específica do Usuário, e possível alcance retroativo sobre saldos, resultados e operações anteriores à comunicação ou à instituição do requisito, nos limites da legislação aplicável. Mantém análise individualizada, comunicação prévia das condições e preservação dos direitos legalmente assegurados.
 
 A adaptação não equivale a um parecer jurídico nem valida a eficácia das cláusulas herdadas. A aplicação operacional de restrições deve passar pela assessoria jurídica responsável.
 
