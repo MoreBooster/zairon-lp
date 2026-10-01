@@ -4,9 +4,14 @@
     Header set Access-Control-Allow-Headers "Content-Type, Authorization"
 </IfModule>
 
-# Serve the language URL produced by the landing page.
+# Normalize shared terms URLs and serve the landing page language URL.
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    # Keep an explicitly requested language; otherwise use the language prefix.
+    RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+    RewriteRule ^(pt-br|pt|en|en-us|es)/terms-of-use(?:\.html)?/?$ /terms-of-use.html?lang=$1 [R=302,L,QSA,NC]
+    RewriteRule ^(?:pt-br|pt|en|en-us|es)/terms-of-use(?:\.html)?/?$ /terms-of-use.html [R=302,L,NC]
+    RewriteRule ^terms-of-use(?:/|\.html/)?$ /terms-of-use.html [R=302,L,NC]
     RewriteRule ^pt-br/$ /pt-br [R=302,L]
     RewriteRule ^pt-br$ index.html [L]
 </IfModule>

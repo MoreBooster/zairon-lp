@@ -1,7 +1,7 @@
-// Repair the placeholder in older HTML when this script is revalidated or a page is restored.
+// Use the public terms URL even when the landing page is served by the trading platform.
 (() => {
   const termsSelector = 'a[data-i18n="footer.linkTerms"], a[data-terms-link]';
-  const termsPath = '/terms-of-use.html';
+  const termsPath = 'https://zaironlp.xyz/terms-of-use.html';
   const repairTermsLinks = () => {
     document.querySelectorAll(termsSelector).forEach(link => {
       link.setAttribute('href', termsPath);
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         emailPlaceholder: "name@example.com",
         password: "Password",
         passwordPlaceholder: "Minimum 8 characters",
-        termsHtml: 'I agree to the <a href="/terms-of-use.html?lang=en" target="_blank" rel="noopener">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>',
+        termsHtml: 'I agree to the <a href="https://zaironlp.xyz/terms-of-use.html?lang=en" target="_blank" rel="noopener">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>',
         submitBtn: "Open my account",
         orDivider: "Or sign in with",
         googleBtn: "Continue with Google",
@@ -448,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
         emailPlaceholder: "nome@exemplo.com",
         password: "Senha",
         passwordPlaceholder: "Mínimo 6 caracteres",
-        termsHtml: 'Eu concordo com os <a href="/terms-of-use.html?lang=pt-br" target="_blank" rel="noopener">Termos e Condições</a> e com a <a href="#" target="_blank">Política de Privacidade</a>',
+        termsHtml: 'Eu concordo com os <a href="https://zaironlp.xyz/terms-of-use.html?lang=pt-br" target="_blank" rel="noopener">Termos e Condições</a> e com a <a href="#" target="_blank">Política de Privacidade</a>',
         submitBtn: "Criar uma conta",
         orDivider: "Ou entre com",
         googleBtn: "Continuar com o Google",
